@@ -1,4 +1,4 @@
-colors = ['Blue', 'Yellow', 'Pink', 'Red', 'Green', 'Orange']
+COLORS = ['Blue', 'Yellow', 'Pink', 'Red', 'Green', 'Orange']
 
 def select_code(colors)
   return Array.new(4) { colors.sample }
@@ -10,15 +10,12 @@ def make_guess()
   while i <= 4
     puts "Enter color #{i}"
     color = gets.capitalize
-    guess.push(color)
-  
+
     i += 1
   end
 
   return guess
 end
 
-code = select_code(colors)
+code = select_code(COLORS)
 guess = make_guess()
-
-puts guess
