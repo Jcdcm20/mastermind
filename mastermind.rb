@@ -11,6 +11,7 @@ def make_guess()
     puts "Enter color #{i}"
     color = gets.capitalize
 
+    guess.push(color)
     i += 1
   end
 
