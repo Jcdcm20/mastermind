@@ -9,9 +9,14 @@ def make_guess()
   i = 1
   while i <= 4
     puts "Enter color #{i}"
-    color = gets.capitalize
+    color = gets.capitalize.chomp
 
-    guess.push(color)
+    if COLORS.include? color
+      guess.push(color)
+    else
+      puts 'Invalid color! Try Again.'
+      next
+    end
     i += 1
   end
 
