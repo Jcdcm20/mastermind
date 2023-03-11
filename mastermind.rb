@@ -23,5 +23,15 @@ def make_guess()
   return guess
 end
 
+def check_guess(guess, code)
+  if guess == code 
+    puts 'You guessed it right!'
+  else
+    puts 'You guessed it wrong!'        
+  end
+end
+
 code = select_code(COLORS)
 guess = make_guess()
+
+check_guess(guess, code)
