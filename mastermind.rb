@@ -31,7 +31,9 @@ def check_guess(guess, code)
     code.each_with_index do |color, index|
       guess.each_with_index do |tent, i|
         if tent == color && index == i
-          check[index] = color
+          check[index] = color.upcase
+        elsif tent == color && index != i
+          check[i] = tent + '*'
         end
       end
     end
