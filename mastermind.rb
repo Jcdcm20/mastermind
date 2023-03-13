@@ -47,4 +47,8 @@ guess = make_guess()
 
 answer = check_guess(guess, sample_code)
 
+puts '----------------------------------------------------------------------------------------'
+puts 'Colors in uppercase are the ones you guessed it right.'
+puts 'Colors followed by a * symbol means the color is part of the code but in the wrong place'
+puts '----------------------------------------------------------------------------------------'
 puts answer
