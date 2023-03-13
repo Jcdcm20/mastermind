@@ -24,14 +24,25 @@ def make_guess()
 end
 
 def check_guess(guess, code)
-  if guess == code 
+  check = ['-', '-', '-', '-']
+  if code == guess
     puts 'You guessed it right!'
   else
-    puts 'You guessed it wrong!'        
+    code.each_with_index do |color, index|
+      guess.each_with_index do |tent, i|
+        if tent == color && index == i
+          check[index] = color
+        end
+      end
+    end
   end
+  return check
 end
 
+sample_code = ['Blue', 'Yellow', 'Pink', 'Red']
 code = select_code(COLORS)
 guess = make_guess()
 
-check_guess(guess, code)
+answer = check_guess(guess, sample_code)
+
+puts answer
