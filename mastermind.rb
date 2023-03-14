@@ -26,7 +26,7 @@ end
 def check_guess(guess, code)
   check = ['-', '-', '-', '-']
   if code == guess
-    puts 'You guessed it right!'
+    return 'You guessed it right!'
   else
     code.each_with_index do |color, index|
       guess.each_with_index do |tent, i|
