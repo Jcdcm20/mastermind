@@ -41,14 +41,22 @@ def check_guess(guess, code)
   return check
 end
 
-sample_code = ['Blue', 'Yellow', 'Pink', 'Red']
+puts 'Welcome to mastermind, the code guessing game!'
+
 code = select_code(COLORS)
-guess = make_guess()
+i = 1
 
-answer = check_guess(guess, sample_code)
+while i < 12
+  
+  guess = make_guess()
 
-puts '----------------------------------------------------------------------------------------'
-puts 'Colors in uppercase are the ones you guessed it right.'
-puts 'Colors followed by a * symbol means the color is part of the code but in the wrong place'
-puts '----------------------------------------------------------------------------------------'
-puts answer
+  answer = check_guess(guess, code)
+
+  puts '----------------------------------------------------------------------------------------'
+  puts 'Colors in uppercase are the ones you guessed it right.'
+  puts 'Colors followed by a * symbol means the color is part of the code but in the wrong place'
+  puts '----------------------------------------------------------------------------------------'
+  puts answer
+
+  i += 1
+end
